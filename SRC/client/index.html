@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="userApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>User</title>
+        <!-- <link rel="shortcut /icon" href="favicon.ico" type="image/vnd.microsoft.icon"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
+    <body ng-controller="mainCtrl">
+        <div class="mid" >
+            <h1 class="letter" id="Joel" onMouseover="changeColor()" onMouseout="revertColor()">Joel G. Chacon</h1>
+        </div>
+        <div class="mid2">
+            <img src="./images/bruce.jpg" id="hulkSmash" onClick="picChange();" onMouseout="picRevert();" alt="">
+        </div>
+        <div>
+            <input type="text" ng-model="joel" placeholder="your name">
+            <h1>{{ joel }}</h1>
+        </div>
+        <div class="mid">
+            <form>
+                <input type="field" placeholder="firstName" ng-model="newUser.firstName">
+                <input type="field" placeholder="lastName" ng-model="newUser.lastName">
+                <input type="field" placeholder="dateOfBirth" ng-model="newUser.dateOfBirth">
+                <input type="field" placeholder="zipCode" ng-model="newUser.zipCode">
+                <input type="submit" ng-click="addUser(newUser)" value="add" class="btn btn-info">
+            </form>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+        <script src="./javascript/vanilla.js"></script>
+        <script src="./javascript/app.js"></script>
+        <script src="./javascript/mainCtrl.js"></script>
+        <script src="./javascript/factory.js"></script>
+    </body>
+</html
