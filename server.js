@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.post('/api/user', user.postUser);
 app.put('/api/user/:id', user.updateUser);
 app.delete('/api/user/:id', user.deleteUser);
-app.get('/api/user', user.getAllUsers);
+app.get('/api/users', user.getAllUsers);
 
 //connection
 var mongoUri = "mongodb://localhost:27017/user";

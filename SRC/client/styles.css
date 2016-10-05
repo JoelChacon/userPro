@@ -1,6 +1,9 @@
  {
 	border: 1px black solid;
 }
+.background {
+	background-image: url('./image/')
+}
 
 .mid {
 	width:300px;
