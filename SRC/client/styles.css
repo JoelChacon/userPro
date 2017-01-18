@@ -2,7 +2,9 @@
 	border: 1px black solid;
 }
 .background {
-	background-image: url('./image/')
+	background-image: url('/images/wolfy.jpg');
+	width: 100vw;
+	height: 100vh;
 }
 
 .mid {
@@ -17,4 +19,8 @@
 }
 .letter {
 	text-align: center;
+}
+.theTop {
+	position: relative;
+	top: 50px;
 }

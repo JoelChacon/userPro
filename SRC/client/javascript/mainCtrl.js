@@ -1,4 +1,5 @@
-angular.module('userApp').controller('mainCtrl', function($scope, $filter, myFactory) {
+ angular.module('userApp')
+ 	    .controller('mainCtrl', function($scope, $filter, myFactory) {
 
 //////////--------------------//////////	
 //definition of function that posts a new user//	
@@ -6,19 +7,19 @@ angular.module('userApp').controller('mainCtrl', function($scope, $filter, myFac
 		myFactory.postUser($scope.newUser).then(function(res) {
 			console.log(res.data);
 		})
-		getAllUsers();
+		$scope.getAllUsers();
 		$scope.newUser = '';
 	}
 //////////--------------------//////////	
 //definition of function that gets all the users//
-	getAllUsers = function() {
+	$scope.getAllUsers = function() {
 		myFactory.getUsers().then(function(res) {
 			console.log(res.data);
 			$scope.users = res.data
 		})
 	}
 //invoking the function that gets all the users	
-	getAllUsers();
+	$scope.getAllUsers();
 //////////--------------------//////////
 //this passes the variable Anjel to the $filter and makes every letter upperCase
 	// $scope.Anjel = '';
@@ -35,7 +36,7 @@ angular.module('userApp').controller('mainCtrl', function($scope, $filter, myFac
 //this deletes the user and invokes the getAllUsers() function to refresh the user list
 	$scope.deleteUser = function(id) {
 		myFactory.deleteUser(id)
-		getAllUsers();
+		$scope.getAllUsers();
 	}
 //////////--------------------//////////
 
